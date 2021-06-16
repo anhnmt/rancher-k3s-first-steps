@@ -2,6 +2,8 @@
 
 Lightweight, easy, fast Kubernetes distribution with a very small footprint
 
+https://k3s.io or https://k3d.io for the dockerized version of k3s.
+
 ## Demo
 
 I'll use Linode for that demo.
