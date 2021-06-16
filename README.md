@@ -31,7 +31,7 @@ Website: https://kubernetes.github.io/ingress-nginx/
 
 ### Additional information
 
-You can change the settings of k3s by changing the service settings e.g. with `nano /etc/systemd/system/k3s-agent.service`.
+You can change the settings of k3s by changing the service settings e.g. with `nano /etc/systemd/system/k3s.service`.
 
 Make sure to restart the service afterwards: `systemctl restart k3s`
 
