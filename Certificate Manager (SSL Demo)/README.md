@@ -11,3 +11,5 @@ Be careful with the LetsEncrypt Poduction Issuer. There is a rate limit and you 
 2. Grab your public IP address: `kubectl -n ingress-nginx get svc`
 
 3. Add your IP and your E-Mail to the appropriate parts of the .yaml files.
+
+4. Apply all ressources `kubectl apply -f .` or just the staging or production ones, as you like.

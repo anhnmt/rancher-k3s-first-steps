@@ -6,7 +6,8 @@ metadata:
 spec:
   secretName: ssl-cert-production
   issuerRef:
-    name: letsencrypt-staging
+    name: letsencrypt-production
+    kind: ClusterIssuer
   commonName: <YOUR_IP>.nip.io
   dnsNames:
   - <YOUR_IP>.nip.io
