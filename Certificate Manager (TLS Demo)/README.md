@@ -1,4 +1,4 @@
-# Enable SSL for your domain
+# Enable TLS and grab a valid certificate for your domain
 
 This demo will use the Nginx Ingress Controller, so be sure to have it installed before proceeding.
 
