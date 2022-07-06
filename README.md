@@ -27,7 +27,21 @@ Install k3s on the worker node and add it to our cluster:
 
 Website: https://kubernetes.github.io/ingress-nginx/
 
-`kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.47.0/deploy/static/provider/cloud/deploy.yaml`
+`kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml`
+
+#### Important note for AWS, Azure, GCP
+
+I can't explain it in detail but if you run a VM on AWS, Azure or GCP the "ingress-nginx" will just pick up the private IP as external IP. You need to manually edit the service to make your public IP address available for nginx, so it can start listening on your public IP address.
+
+`kubectl -n ingress-nginx edit svc ingress-nginx-controller`
+
+Add your IP as list to `spec.externalIPs` like so:
+
+```
+  spec:
+    externalIPs:
+    - <YOUR_IP>
+```
 
 ### Additional information
 
